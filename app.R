@@ -1,7 +1,4 @@
 library(dash)
-library(dashBootstrapComponents)
-library(dashHtmlComponents)
-library(dashCoreComponents)
 library(ggplot2)
 library(dplyr)
 library(tidyr)
@@ -17,7 +14,7 @@ df <- read_csv("data/videoGame.csv")
 year_list <- c(2013, 2014, 2015, 2016, 2017, 2018)
 
 # Setup app and layout/frontend
-app <- Dash$new(external_stylesheets = dbcThemes$BOOTSTRAP)
+app <- Dash$new()
 
 app$layout(
   dbcContainer(
